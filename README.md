@@ -6,3 +6,6 @@
 
 ### Even-game demonstration:
 [![asciicast](https://asciinema.org/a/538555.svg)](https://asciinema.org/a/538555)
+
+### Calc-game demonstration:
+[![asciicast](https://asciinema.org/a/538693.svg)](https://asciinema.org/a/538693)
