@@ -9,3 +9,6 @@
 
 ### Calc-game demonstration:
 [![asciicast](https://asciinema.org/a/538693.svg)](https://asciinema.org/a/538693)
+
+### GCD-game demonstration:
+[![asciicast](https://asciinema.org/a/538813.svg)](https://asciinema.org/a/538813)
