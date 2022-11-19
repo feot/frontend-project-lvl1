@@ -19,7 +19,7 @@ export default (gameRule, game) => {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!`);
       return;
     }
   }
