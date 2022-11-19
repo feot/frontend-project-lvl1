@@ -12,3 +12,6 @@
 
 ### GCD-game demonstration:
 [![asciicast](https://asciinema.org/a/538813.svg)](https://asciinema.org/a/538813)
+
+### Progression-game demonstration:
+[![asciicast](https://asciinema.org/a/538818.svg)](https://asciinema.org/a/538818)
