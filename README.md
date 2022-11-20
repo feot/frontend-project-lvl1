@@ -4,6 +4,21 @@
 ### CodeClimate Maintainability:
 [![Maintainability](https://api.codeclimate.com/v1/badges/132b125ed62a4cac3532/maintainability)](https://codeclimate.com/github/feot/frontend-project-lvl1/maintainability)
 
+# Description:
+Simple math games running in terminal
+
+# Setup:
+1. Clone this repo
+2. Install with ```make install```
+3. Run game with ```brain-<game_name>```
+
+# Games:
+* Even-game
+* Calc-game
+* GCD-game
+* Progression-game
+* Prime-game
+
 ### Even-game demonstration:
 [![asciicast](https://asciinema.org/a/538555.svg)](https://asciinema.org/a/538555)
 
