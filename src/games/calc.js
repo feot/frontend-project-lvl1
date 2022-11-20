@@ -8,21 +8,21 @@ const gameData = () => {
   const numberA = getRandomNumber(1, 100);
   const numberB = getRandomNumber(1, 100);
   const operatorIndex = getRandomNumber(1, 3);
-  let question;
+  let question = 'Question: ';
   let correctAnswer;
 
   switch (operatorIndex) {
     case 1:
       correctAnswer = (numberA + numberB).toString();
-      question = `${numberA} + ${numberB}`;
+      question += `${numberA} + ${numberB}`;
       break;
     case 2:
       correctAnswer = (numberA - numberB).toString();
-      question = `${numberA} - ${numberB}`;
+      question += `${numberA} - ${numberB}`;
       break;
     case 3:
       correctAnswer = (numberA * numberB).toString();
-      question = `${numberA} * ${numberB}`;
+      question += `${numberA} * ${numberB}`;
       break;
     default:
       break;
