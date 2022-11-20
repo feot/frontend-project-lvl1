@@ -15,3 +15,6 @@
 
 ### Progression-game demonstration:
 [![asciicast](https://asciinema.org/a/538818.svg)](https://asciinema.org/a/538818)
+
+### Prime-game demonstration:
+[![asciicast](https://asciinema.org/a/539027.svg)](https://asciinema.org/a/539027)
