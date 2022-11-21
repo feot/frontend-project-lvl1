@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandomNumber.js';
+import getRandomNumber from '../utils/getRandomNumber.js';
 import gameBase from '../index.js';
 
 const gameRule = 'What is the result of the expression?';

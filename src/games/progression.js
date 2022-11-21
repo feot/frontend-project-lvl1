@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandomNumber.js';
-import getProgression from '../getProgression.js';
+import getRandomNumber from '../utils/getRandomNumber.js';
+import getProgression from '../utils/getProgression.js';
 import gameBase from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
