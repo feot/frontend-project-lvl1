@@ -5,7 +5,7 @@ import gameBase from '../index.js';
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameData = () => {
-  const number = getRandomNumber(1, 100);
+  const number = getRandomNumber();
   const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
   const question = `Question: ${number}`;
 

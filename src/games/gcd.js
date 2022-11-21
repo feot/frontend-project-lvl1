@@ -6,8 +6,8 @@ import gameBase from '../index.js';
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const gameData = () => {
-  const numberA = getRandomNumber(1, 100);
-  const numberB = getRandomNumber(1, 100);
+  const numberA = getRandomNumber();
+  const numberB = getRandomNumber();
   const question = (`Question: ${numberA} ${numberB}`);
   const correctAnswer = getGCD([numberA, numberB]).toString();
 

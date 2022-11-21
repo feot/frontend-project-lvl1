@@ -6,7 +6,7 @@ import gameBase from '../index.js';
 const gameRule = 'What number is missing in the progression?';
 
 const gameData = () => {
-  const progressionStart = getRandomNumber(1, 100);
+  const progressionStart = getRandomNumber();
   const progressionLength = 10;
   const progressionStep = getRandomNumber(1, 5);
   const missingNumberIndex = getRandomNumber(0, progressionLength - 1);

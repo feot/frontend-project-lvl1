@@ -6,7 +6,7 @@ import gameBase from '../index.js';
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gameData = () => {
-  const number = getRandomNumber(1, 100);
+  const number = getRandomNumber();
   const primeNumbers = getPrimeNumbers(100);
   const question = (`Question: ${number}`);
   const correctAnswer = (primeNumbers.includes(number)) ? 'yes' : 'no';

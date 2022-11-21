@@ -5,8 +5,8 @@ import gameBase from '../index.js';
 const gameRule = 'What is the result of the expression?';
 
 const gameData = () => {
-  const numberA = getRandomNumber(1, 100);
-  const numberB = getRandomNumber(1, 100);
+  const numberA = getRandomNumber();
+  const numberB = getRandomNumber();
   const operatorIndex = getRandomNumber(1, 3);
   let question = 'Question: ';
   let correctAnswer;
