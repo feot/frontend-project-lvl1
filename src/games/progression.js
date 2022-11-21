@@ -12,13 +12,7 @@ const gameData = () => {
   const missingNumberIndex = getRandomNumber(0, progressionLength - 1);
   const progression = getProgression(progressionStart, progressionLength, progressionStep);
   const correctAnswer = progression[missingNumberIndex].toString();
-  const questionProgression = progression.map((item, i) => {
-    if (i === missingNumberIndex) {
-      return '..';
-    }
-
-    return item;
-  });
+  const questionProgression = progression.map((item, i) => (i === missingNumberIndex ? '..' : item));
 
   const question = (`Question: ${questionProgression.join(' ')}`);
 
