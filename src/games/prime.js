@@ -1,15 +1,14 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
-import getPrimeNumbers from '../utils/getPrimeNumbers.js';
+import isPrime from '../utils/isPrime.js';
 import gameBase from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gameData = () => {
   const number = getRandomNumber();
-  const primeNumbers = getPrimeNumbers(100);
   const question = (`Question: ${number}`);
-  const correctAnswer = (primeNumbers.includes(number)) ? 'yes' : 'no';
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   console.log(question);
 
