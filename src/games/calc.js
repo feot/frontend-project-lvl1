@@ -25,7 +25,7 @@ const gameData = () => {
       question += `${numberA} * ${numberB}`;
       break;
     default:
-      break;
+      throw new Error('incorrect operatorIndex', operatorIndex);
   }
 
   console.log(question);
