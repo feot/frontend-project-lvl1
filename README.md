@@ -7,6 +7,10 @@
 # Description:
 Simple math games running in terminal
 
+# Requirements:
+node version: ^v19.1.0
+make version: ^4.2.1
+
 # Setup:
 1. Clone this repo
 2. Install with ```make install```
