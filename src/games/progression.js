@@ -1,8 +1,17 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
-import getProgression from '../utils/getProgression.js';
 import gameBase from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
+
+const getProgression = (progressionStart, progressionLength, progressionStep) => {
+  const res = [];
+
+  for (let i = 0; i < progressionLength; i += 1) {
+    res.push(progressionStart + progressionStep * i);
+  }
+
+  return res;
+};
 
 const generateGameData = () => {
   const progressionStart = getRandomNumber();
