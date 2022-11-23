@@ -5,7 +5,7 @@ import gameBase from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
 
-const gameData = () => {
+const generateGameData = () => {
   const progressionStart = getRandomNumber();
   const progressionLength = 10;
   const progressionStep = getRandomNumber(1, 5);
@@ -23,4 +23,4 @@ const gameData = () => {
   return [correctAnswer, playerAnswer];
 };
 
-export default () => gameBase(gameRule, gameData);
+export default () => gameBase(gameRule, generateGameData);

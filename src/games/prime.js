@@ -5,7 +5,7 @@ import gameBase from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const gameData = () => {
+const generateGameData = () => {
   const number = getRandomNumber();
   const question = (`Question: ${number}`);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
@@ -17,4 +17,4 @@ const gameData = () => {
   return [correctAnswer, playerAnswer];
 };
 
-export default () => gameBase(gameRule, gameData);
+export default () => gameBase(gameRule, generateGameData);

@@ -1,6 +1,6 @@
 import getPlayerName from './utils/getPlayerName.js';
 
-export default (gameRule, game) => {
+export default (gameRule, gameData) => {
   const playerName = getPlayerName();
 
   console.log(`Hello, ${playerName}!`);
@@ -10,7 +10,7 @@ export default (gameRule, game) => {
   console.log(gameRule);
 
   while (correctAnswersCount < 3) {
-    const [correctAnswer, playerAnswer] = game();
+    const [correctAnswer, playerAnswer] = gameData();
     const isAnswerCorrect = correctAnswer === playerAnswer;
 
     if (isAnswerCorrect) {

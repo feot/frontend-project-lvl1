@@ -4,7 +4,7 @@ import gameBase from '../index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const gameData = () => {
+const generateGameData = () => {
   const number = getRandomNumber();
   const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
   const question = `Question: ${number}`;
@@ -16,4 +16,4 @@ const gameData = () => {
   return [correctAnswer, playerAnswer];
 };
 
-export default () => gameBase(gameRule, gameData);
+export default () => gameBase(gameRule, generateGameData);

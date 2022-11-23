@@ -4,7 +4,7 @@ import gameBase from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 
-const gameData = () => {
+const generateGameData = () => {
   const numberA = getRandomNumber();
   const numberB = getRandomNumber();
   const operatorIndex = getRandomNumber(1, 3);
@@ -35,4 +35,4 @@ const gameData = () => {
   return [correctAnswer, playerAnswer];
 };
 
-export default () => gameBase(gameRule, gameData);
+export default () => gameBase(gameRule, generateGameData);
