@@ -16,15 +16,16 @@ const getProgression = (progressionStart, progressionLength, progressionStep) =>
 const generateGameData = () => {
   const progressionStart = getRandomNumber();
   const progressionLength = 10;
-  const progressionStep = getRandomNumber(1, 5);
+  const progressionStepMin = 1;
+  const progressionStepMax = 5;
+  const progressionStep = getRandomNumber(progressionStepMin, progressionStepMax);
   const missingNumberIndex = getRandomNumber(0, progressionLength - 1);
   const progression = getProgression(progressionStart, progressionLength, progressionStep);
   const correctAnswer = progression[missingNumberIndex].toString();
-  const questionProgression = progression.map((item, i) => (i === missingNumberIndex ? '..' : item));
 
-  const question = questionProgression.join(' ');
+  progression[missingNumberIndex] = '..';
 
-  console.log(question);
+  const question = progression.join(' ');
 
   return [question, correctAnswer];
 };
