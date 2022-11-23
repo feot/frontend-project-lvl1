@@ -1,3 +1,4 @@
+import readlineSync from 'readline-sync';
 import getPlayerName from './utils/getPlayerName.js';
 
 export default (gameRule, gameData) => {
@@ -10,7 +11,11 @@ export default (gameRule, gameData) => {
   console.log(gameRule);
 
   while (correctAnswersCount < 3) {
-    const [correctAnswer, playerAnswer] = gameData();
+    const [question, correctAnswer] = gameData();
+
+    console.log(`Question: ${question}`);
+
+    const playerAnswer = readlineSync.question('Your answer: ');
     const isAnswerCorrect = correctAnswer === playerAnswer;
 
     if (isAnswerCorrect) {

@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import gameBase from '../index.js';
 
@@ -10,31 +9,27 @@ const generateGameData = () => {
   const operatorIndexMin = 1;
   const operatorIndexMax = 3;
   const operatorIndex = getRandomNumber(operatorIndexMin, operatorIndexMax);
-  let question = 'Question: ';
+  let question;
   let correctAnswer;
 
   switch (operatorIndex) {
     case 1:
       correctAnswer = (numberA + numberB).toString();
-      question += `${numberA} + ${numberB}`;
+      question = `${numberA} + ${numberB}`;
       break;
     case 2:
       correctAnswer = (numberA - numberB).toString();
-      question += `${numberA} - ${numberB}`;
+      question = `${numberA} - ${numberB}`;
       break;
     case 3:
       correctAnswer = (numberA * numberB).toString();
-      question += `${numberA} * ${numberB}`;
+      question = `${numberA} * ${numberB}`;
       break;
     default:
       throw new Error('incorrect operatorIndex', operatorIndex);
   }
 
-  console.log(question);
-
-  const playerAnswer = readlineSync.question('Your answer: ');
-
-  return [correctAnswer, playerAnswer];
+  return [question, correctAnswer];
 };
 
 export default () => gameBase(gameRule, generateGameData);

@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import getProgression from '../utils/getProgression.js';
 import gameBase from '../index.js';
@@ -14,13 +13,11 @@ const generateGameData = () => {
   const correctAnswer = progression[missingNumberIndex].toString();
   const questionProgression = progression.map((item, i) => (i === missingNumberIndex ? '..' : item));
 
-  const question = (`Question: ${questionProgression.join(' ')}`);
+  const question = questionProgression.join(' ');
 
   console.log(question);
 
-  const playerAnswer = readlineSync.question('Your answer: ');
-
-  return [correctAnswer, playerAnswer];
+  return [question, correctAnswer];
 };
 
 export default () => gameBase(gameRule, generateGameData);
