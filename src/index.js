@@ -1,10 +1,8 @@
 import readlineSync from 'readline-sync';
-import getPlayerName from './utils/getPlayerName.js';
+import greeting from './cli.js';
 
 export default (gameRule, gameData) => {
-  const playerName = getPlayerName();
-
-  console.log(`Hello, ${playerName}!`);
+  const playerName = greeting();
 
   let correctAnswersCount = 0;
 
