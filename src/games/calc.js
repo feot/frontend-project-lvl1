@@ -7,7 +7,9 @@ const gameRule = 'What is the result of the expression?';
 const generateGameData = () => {
   const numberA = getRandomNumber();
   const numberB = getRandomNumber();
-  const operatorIndex = getRandomNumber(1, 3);
+  const operatorIndexMin = 1;
+  const operatorIndexMax = 3;
+  const operatorIndex = getRandomNumber(operatorIndexMin, operatorIndexMax);
   let question = 'Question: ';
   let correctAnswer;
 
