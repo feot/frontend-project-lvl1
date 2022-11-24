@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/feot/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/feot/frontend-project-lvl1/actions)",
+  "description": "Simple math games running in terminal",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
