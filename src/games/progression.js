@@ -1,16 +1,16 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
 import gameBase from '../index.js';
 
-const gameRule = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getProgression = (progressionStart, progressionLength, progressionStep) => {
-  const res = [];
+  const result = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    res.push(progressionStart + progressionStep * i);
+    result.push(progressionStart + progressionStep * i);
   }
 
-  return res;
+  return result;
 };
 
 const generateGameData = () => {
@@ -30,4 +30,4 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameBase(gameRule, generateGameData);
+export default () => gameBase(description, generateGameData);

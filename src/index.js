@@ -1,15 +1,15 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-export default (gameRule, gameData) => {
+export default (description, generateGameData) => {
   const roundsCount = 3;
   const playerName = greeting();
   let correctAnswersCount = 0;
 
-  console.log(gameRule);
+  console.log(description);
 
   while (correctAnswersCount < roundsCount) {
-    const [question, correctAnswer] = gameData();
+    const [question, correctAnswer] = generateGameData();
 
     console.log(`Question: ${question}`);
 

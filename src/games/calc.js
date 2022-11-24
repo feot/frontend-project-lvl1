@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
 import gameBase from '../index.js';
 
-const gameRule = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = (operatorIndex, numberA, numberB) => {
   let question;
@@ -38,4 +38,4 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameBase(gameRule, generateGameData);
+export default () => gameBase(description, generateGameData);

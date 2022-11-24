@@ -3,7 +3,7 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
 import gameBase from '../index.js';
 
-const gameRule = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (numbers) => {
   const [numberA, numberB] = numbers;
@@ -26,4 +26,4 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameBase(gameRule, generateGameData);
+export default () => gameBase(description, generateGameData);

@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
 import gameBase from '../index.js';
 
-const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateGameData = () => {
   const number = getRandomNumber();
@@ -10,4 +10,4 @@ const generateGameData = () => {
   return [number, correctAnswer];
 };
 
-export default () => gameBase(gameRule, generateGameData);
+export default () => gameBase(description, generateGameData);
