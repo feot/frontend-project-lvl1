@@ -18,8 +18,8 @@ const calc = (numberA, numberB, operator) => {
 
 const generateOperator = () => {
   const operators = ['+', '-', '*'];
-  const operatorIndexMin = 1;
-  const operatorIndex = getRandomNumber(operatorIndexMin, operators.length);
+  const operatorIndexMin = 0;
+  const operatorIndex = getRandomNumber(operatorIndexMin, operators.length - 1);
 
   return operators[operatorIndex];
 };
