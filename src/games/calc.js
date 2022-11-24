@@ -3,37 +3,33 @@ import gameBase from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const getQuestionAndAnswer = (operatorIndex, numberA, numberB) => {
-  let question;
-  let correctAnswer;
-
-  switch (operatorIndex) {
-    case 1:
-      question = `${numberA} + ${numberB}`;
-      correctAnswer = (numberA + numberB).toString();
-      break;
-    case 2:
-      question = `${numberA} - ${numberB}`;
-      correctAnswer = (numberA - numberB).toString();
-      break;
-    case 3:
-      question = `${numberA} * ${numberB}`;
-      correctAnswer = (numberA * numberB).toString();
-      break;
+const calc = (numberA, numberB, operator) => {
+  switch (operator) {
+    case '+':
+      return numberA + numberB;
+    case '-':
+      return numberA - numberB;
+    case '*':
+      return numberA * numberB;
     default:
-      throw new Error('incorrect operatorIndex', operatorIndex);
+      throw new Error('incorrect operator', operator);
   }
+};
 
-  return [question, correctAnswer];
+const generateOperator = () => {
+  const operators = ['+', '-', '*'];
+  const operatorIndexMin = 1;
+  const operatorIndex = getRandomNumber(operatorIndexMin, operators.length);
+
+  return operators[operatorIndex];
 };
 
 const generateGameData = () => {
   const numberA = getRandomNumber();
   const numberB = getRandomNumber();
-  const operatorIndexMin = 1;
-  const operatorIndexMax = 3;
-  const operatorIndex = getRandomNumber(operatorIndexMin, operatorIndexMax);
-  const [question, correctAnswer] = getQuestionAndAnswer(operatorIndex, numberA, numberB);
+  const operator = generateOperator();
+  const question = `${numberA} ${operator} ${numberB}`;
+  const correctAnswer = (calc(numberA, numberB, operator)).toString();
 
   return [question, correctAnswer];
 };
